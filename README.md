@@ -1,6 +1,7 @@
 ```mermaid
+%%{init: {'theme': 'default', 'themeVariables': { 'fontSize': '18px', 'fontFamily': 'arial', 'nodeSpacing': 100, 'rankSpacing': 100 }}}%%
 flowchart LR
-    A[Excel Data<br>4.71GB] -->|random.shuffle<br>1GB chunks| B[Kafka Producer<br>Topic: 2 Partitions]
+    A[Excel Data<br>4.70GB] -->|random.shuffle<br>1GB chunks| B[Kafka Producer<br>Topic: 2 Partitions]
     B --> C[Kafka Topic]
     C -->|Consumer| D[Spark<br>Data Cleaning and Tokenization]
     D -->|SQL| E[Spark Temp View and Parquet Storage]
